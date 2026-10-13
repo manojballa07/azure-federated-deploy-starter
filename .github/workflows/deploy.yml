@@ -13,10 +13,12 @@ on:
     branches:
       - main
   workflow_dispatch:
-
+permissions:
+      id-token: write
+      contents: read
 env:
   AZURE_WEBAPP_NAME: "app-fedid-zjkhg5a5lr5a4.azurewebsites.net"
-
+  
 jobs:
   deploy:
     name: Build and deploy
